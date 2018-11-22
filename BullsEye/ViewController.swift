@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  BullsEye
-//
-//  Created by tima on 11/11/18.
-//  Copyright © 2018 com.tim. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -71,7 +63,7 @@ class ViewController: UIViewController {
     
     @IBAction func startNewGame() {
         score=0
-        round.text=String(0)
+        roundNumber=0
         startNewRound()
     }
     
@@ -105,16 +97,15 @@ class ViewController: UIViewController {
         score+=points
         
         let alert=UIAlertController(title: title, message:message , preferredStyle: .alert)
-        let action=UIAlertAction(title: "Awesome", style: .default, handler:{
+        let action=UIAlertAction(title: "Ок", style: .default, handler:{
             action in
             self.startNewRound()
         })
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
-
+        
     }
     
-
+    
 }
-
